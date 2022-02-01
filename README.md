@@ -1,16 +1,14 @@
 # OtoslottoAPI
-Ez egy nyílt forráskódú API az ötöslottó legutóbbi illetve [mindenkori sorsolásainak](https://bet.szerencsejatek.hu/cmsfiles/otos.html) lekéréséhez.
+Ez egy nyílt forráskódú API az ötöslottó [jelenlegi](https://bet.szerencsejatek.hu/jatekok/otoslotto) információinak lekéréshez.
 
 ### A kulisszák mögött
-A script minden bejövő kérésnél lekéri és rendszerezi a nyilvánosan elérhető HTML táblázatot, amit fentebb linkeltem.
+A script minden bejövő kérésnél lekéri és rendszerezi a nyilvánosan elérhető adatokat, majd vissza küldi azokat ```JSON``` formátumban.
 
 ### Használat & demó
-- Demó: *hamarosan*
+- Demó: [kattints ide](https://lottery.skiby.net/api/v1/current)
 - Endpointok:
-  - A kéréseket a ```/api/v1/results``` endpointra kell küldeni. Itt kettő paramétert kell meghatároznunk:
-    - ```type```: A type (típus) lehetséges értékei a ```latest``` vagy ```all``` lehet (```latest``` a legelső, ```all``` az összes sor a táblázatból)
-    - ```format```: A format (formátum) lehetséges értékei a ```json``` vagy ```html``` lehet. Ez a paraméter opcionális, és az alapértelmezett értéke a ```json```.
+  - A kéréseket a ```/api/v1/current/``` endpointra kell küldeni.
 - A kéréseket ```GET``` kérésként küldd.
-- Jelenleg az adatokat nem gyűjtji a rendszer sehova sem, szóval egy rate limit rendszert érdemes lehet bevezetni.
+- Jelenleg az adatokat nem gyűjtji a rendszer sehova sem, szóval egy rate limit rendszert lehet bevezetek a jövőben.
 
 A script beüzemeléséhez szükséged lesz a Python 3.8+ verziójára. Ssükséges csomagok: ```pip install -r requirements.txt```
