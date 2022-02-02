@@ -49,10 +49,20 @@ async def skandinavlotto():
     soup = BeautifulSoup(req.text.encode("utf-8"), "html.parser")
 
     current = soup.find("section", {"class": "top-banner-container top-banner-lotto7"})
+
+    try:
+        week = current.find("div", {"class": "week"}).find("span").getText().strip()
+    except AttributeError:
+        week = None
+    '''
+    When the online betting is currently paused, there is no week displayed on the website.
+    This way we can avoid an error and inform the client about the status of the betting.
+    '''
+
     response = jsonify( 
         {   
             "drawDate": current.find("div", {"class": "draw-date"}).getText().strip(),
-            "week": current.find("div", {"class": "week"}).find("span").getText().strip(),
+            "week": week,
             "expectedPrice": current.find("div", {"class": "expected-price"}).find("h3").getText(),
             "logoImage": "https://bet.szerencsejatek.hu/assets/a5e3dce5/e99c1120/img/top-banner/lotto7.png"
         }
