@@ -1,5 +1,5 @@
-# OtoslottoAPI
-Ez egy nyílt forráskódú API az ötöslottó [jelenlegi](https://bet.szerencsejatek.hu/jatekok/otoslotto) információinak lekéréshez.
+# SzerencsejatekAPI
+Ez egy nyílt forráskódú API a [szerencsejatek.hu](https://www.szerencsejatek.hu/) jelenjegi játék információinak lekéréshez.
 
 ### A kulisszák mögött
 A script minden bejövő kérésnél lekéri és rendszerezi a nyilvánosan elérhető adatokat, majd vissza küldi azokat ```JSON``` formátumban.
