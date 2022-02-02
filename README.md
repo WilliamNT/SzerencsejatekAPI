@@ -1,6 +1,9 @@
 # SzerencsejatekAPI
 Ez egy nyílt forráskódú API a [szerencsejatek.hu](https://www.szerencsejatek.hu/) jelenjegi játék információinak lekéréshez.
 
+### Megjegyzés
+Tisztában vagyok vele, hogy a kódon lehetne javítani. Jelenleg egy Proof-Of-Concept célt szolgál, ezért nem nyúlok hozzá. A jövőben valószínűleg frissítem.
+
 ### A kulisszák mögött
 A script minden bejövő kérésnél lekéri és rendszerezi a nyilvánosan elérhető adatokat, majd vissza küldi azokat ```JSON``` formátumban.
 
